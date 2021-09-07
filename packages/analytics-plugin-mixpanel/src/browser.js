@@ -141,7 +141,7 @@ function mixpanelPlugin(pluginConfig = {}) {
      * the path as tracked event and search parameters as properties
      */
     page: ({ payload }) => {
-      mixpanel.track(payload.properties.path, {
+      mixpanel.track(payload.properties.pageName, {
         search: payload.properties.search,
       });
     },
